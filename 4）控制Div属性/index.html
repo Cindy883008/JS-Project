@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #outer{width:500px;margin:0 auto;padding:0;text-align:center;}
+        #div1{width:100px;height:100px;background:black;margin:10px auto;display:block;}
+    </style>
+</head>
+<body>
+    <div id="outer">
+        <input type="button" value="变宽" />
+        <input type="button" value="变高" />
+        <input type="button" value="变色" />
+        <input type="button" value="隐藏" />
+        <input type="button" value="重置" />
+        <div id="div1"></div>
+    </div>
+    <script src="jquery-1.11.3.js"></script>
+    <script>
+       $( "input:eq(0)").click(function(){
+            $("#div1").css("width","300px");
+        });
+
+       $( "input:eq(1)").click(function(){
+           $("#div1").css("height","300px");
+       });
+       $( "input:eq(2)").click(function(){
+           $("#div1").css("background","red");
+       });
+       $( "input:eq(3)").click(function(){
+           $("#div1").css("display","none");
+       });
+
+       $( "input:eq(4)").click(function(){
+           $("#div1").css("display","reset");
+       });
+
+
+
+    </script>
+</body>
+</html>

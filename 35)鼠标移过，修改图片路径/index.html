@@ -1,0 +1,49 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>鼠标移过，改变图片路径</title>
+    <style>
+        body,ul,li{margin:0;padding:0;}
+        body{background:#000;}
+        img{border:0;border-radius:3px;}
+        ul{list-style-type:none;}
+        #box{width:212px;border:5px solid #fff;overflow:hidden;zoom:1;background:#fff;border-radius:5px;margin:10px auto;padding:0 0 3px 3px;}
+        #box li,#box li img{float:left;width:50px;height:50px;}
+        #box li{margin:3px 3px 0 0;}
+        #box li.first{position:relative;}
+        #box li.first,#box li.first img{width:156px;height:156px;}
+        #box li.first div{position:absolute;top:0;left:0;width:156px;height:156px;display:none;opacity:0.5;filter:alpha(opacity=50);background:#fff url(img/loading.gif) 50% 50% no-repeat;}
+    </style>
+    <script type="text/javascript">
+        window.onload = function ()
+        {
+            var Oli=document.getElementsByTagName("li");
+            var Oimg=document.getElementsByTagName("img");
+            Oli[i].index = Oimg[i].index = i;
+            for(var i=0;i<Oli.length;i++){
+                Oimg[this.index].onmouseover=function(){
+                    Oimg[this.index].className="first";
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+<ul id="box">
+    <li class="first"><img src="img/big_1.jpg"><div></div></li>
+    <li><a href="javascript:;"><img src="img/1.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/2.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/3.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/4.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/5.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/6.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/7.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/8.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/9.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/10.jpg"></a></li>
+    <li><a href="javascript:;"><img src="img/11.jpg"></a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>css函数——设置/读取对象的属性</title>
+    <style>
+        div{width:400px;height:200px;background:#fef4eb;border:1px solid #f60;margin:0 auto;}
+        input{border:0;color:#fff;cursor:pointer;font-weight:700;background:#f60;padding:2px 4px;margin:10px 0 0 10px;}
+    </style>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oInput=document.getElementsByTagName("input");
+            var div=document.getElementById("box");
+            oInput[0].onclick=function(){
+                alert("width:400px;height:200px;background:#fef4eb;border:1px solid #f60;margin:0 auto;");
+            }
+
+            oInput[1].onclick=function(){
+                div.style.width="330px";
+                div.style.height="100px";
+                div.style.background="#eff8ff";
+                div.style.borderColor="#0084ff";
+                div.style.margin="margin:0 auto";
+            }
+
+            oInput[2].onclick=function(){
+                div.style.width="400px";
+                div.style.height="200px";
+                div.style.background="#fef4eb";
+                div.style.borderColor="#f60";
+                div.style.margin="margin:0 auto";
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    <input type="button" value="Get Style" />
+    <input type="button" value="Set Style" />
+    <input type="button" value="Default Style" />
+</div>
+</body>
+</html>
